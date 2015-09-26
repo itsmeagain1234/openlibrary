@@ -43,7 +43,8 @@ fclose($fp);
 // attempt insert query execution
 $sql = "INSERT INTO phpro_users (USERNAME,phpro_password,GENDER,REGNO,EMAILID,MOBNO,profilepic)VALUES ('$name', '$paswd', '$gender','$Regno','$Email','$mob','$data')";
 if(mysqli_query($link, $sql)){
-    echo "Records added successfully.";
+    echo "<table><tr bgcolor=' #B0B6B8'><td>Records added successfully.</td></tr></table>";
+	echo "<a  href=login.html ><button type='button'>GO_TO_LOGIN_PAGE</button></a>";
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }

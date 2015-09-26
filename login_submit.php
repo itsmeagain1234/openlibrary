@@ -41,7 +41,7 @@ $iframepage="logoutnor";
 <div>
 <p align="right"> <a href="logout.php"><button type="button">LOGOUT</button></a></p>
 </div>
-<h1 align="center"><font face="verdana" color="green"> WELCOME TO OPEN-LIBRARY</font></h1>
+<h1 align="center"><font color='white' face="verdana" color="green"> WELCOME TO OPEN-LIBRARY</font></h1>
  <iframe src=<?php echo $iframepage; ?>.html  height=99% width=99% frameborder='0' scrolling='no'> 
 </iframe>
 </body>
