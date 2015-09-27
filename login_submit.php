@@ -46,7 +46,7 @@ echo "<p align='right'> <a href='logout.php'><button type='button'>LOGOUT</butto
 }
 else 
 {
-echo " <iframe src=login.html  height=99% width=99% frameborder='0' scrolling='no'></iframe>";
+echo "no doughnuts for you....hahaha...";
 }
 ?>
 </body>
