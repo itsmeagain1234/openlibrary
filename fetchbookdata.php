@@ -64,12 +64,14 @@ echo "</tr>";
 	echo "AVAILABLE";
 	}
 	elseif($row["status"]==2){
-	echo "BORROWED";
+	$bookidval=$row["bookid"];
+	echo "<p>BORROWED<br>";
+	echo "<a href=received.php?bookid=$bookidval><button type='button'>RECEIVED</button></a></p>";
 	}
 	else{
 	$bookidval=$row["bookid"];
-	echo "<p> <a href=request.php?book=$bookidval>ACCEPT</a> <br>";
-	echo "<a href=denie.php?book=$bookidval>DENIE</a></p> ";
+	echo "<p> <a href=request.php?book=$bookidval><button type='button'>ACCEPT</button></a> <br>";
+	echo "<a href=denie.php?book=$bookidval><button type='button'>DENIE</button></a></p> ";
 
 }
 

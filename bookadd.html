@@ -10,31 +10,30 @@
   <link rel="stylesheet" href="stylebook.css">
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-
 <body>
   <div class="container">
     <section class="register">
-      <h1>BOOKS</h1>
-      <form  action="bookadd.php" method="post" >
+      <h1>ADD BOOK</h1>
+      <form name="myform"  action="bookadd.php" method="post" >
       
       <div class="reg_section book_info">
       <h3>BOOK NAME</h3>
-      <input type="text" name="bookname" value="" placeholder="THE BOOK NAME">
+      <input type="text" name="bookname" required pattern="[A-Za-z ]{3,25}"  >
       </div>
       
       <div class="reg_section author_info">
       <h3>AUTHOR NAME</h3>
-      <input type="text" name="authorname" value="" placeholder="THE AUTHOR NAME">
+      <input type="text" name="authorname" required pattern="[A-Za-z .]{3,25}" >
       </div>
      
       <div class="reg_section publisher_info">
       <h3>PUBLISHER</h3>
-      <input type="text" name="publisher" value="" placeholder="PUBLISHER">
+      <input type="text" name="publisher" required pattern="[A-Za-z ]{3,25}">
       </div>
       
       <div class="reg_section tags">
       <h3>TAGS</h3>
-      <input type="text" name="tags" value="" placeholder="TAGS">
+      <input type="text" name="tags" required pattern="[A-Za-z,]{3,25}" >
       </div>
       
       <p class="terms">
@@ -50,4 +49,3 @@
   
 </body>
 </html>
-

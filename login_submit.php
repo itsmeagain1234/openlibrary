@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
 }}
 if($Flag==1)
 {
-$iframepage="logoutnor";
+$iframepage="login";
 };
 
 ?>
@@ -39,11 +39,16 @@ $iframepage="logoutnor";
 </head>
 <body background=" Book-iPad-wallpaper-Library-1.jpg">
 <div>
-<p align="right"> <a href="logout.php"><button type="button">LOGOUT</button></a></p>
-</div>
-<h1 align="center"><font color='white' face="verdana" color="green"> WELCOME TO OPEN-LIBRARY</font></h1>
- <iframe src=<?php echo $iframepage; ?>.html  height=99% width=99% frameborder='0' scrolling='no'> 
-</iframe>
+<?php 
+if ($Flag==0)
+{
+echo "<p align='right'> <a href='logout.php'><button type='button'>LOGOUT</button></a></p></div><h1 align='center'><font color='white' face='verdana' color='green'> WELCOME TO OPEN-LIBRARY</font></h1> <iframe src=postlogin.html  height=99% width=99% frameborder='0' scrolling='no'></iframe>"
+}
+else 
+{
+echo " <iframe src=login.html  height=99% width=99% frameborder='0' scrolling='no'></iframe>"
+}
+?>
 </body>
 </html>
 	

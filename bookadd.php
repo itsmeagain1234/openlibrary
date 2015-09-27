@@ -17,11 +17,11 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO bookdet(bookid,REGNO,bookname,author,status,tags)
-VALUES (NULL,'$Regno','$bookname','$authorname ','$status','$tags')";
+$sql = "INSERT INTO bookdet(bookid,REGNO,bookname,author,Publisher,status,tags)
+VALUES (NULL,'$Regno','$bookname','$authorname ','$publisher','$status','$tags')";
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    echo "<p align='center'><h3><font color='white'>$bookname Added Successfully</font></h3><br></p>";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
@@ -31,8 +31,7 @@ mysqli_close($conn);
 <html>
 <body>
 <p>
-<?php echo $bookname;?>
-<a href="bookadd.html">Add Another Book</a>
+<a href="bookadd.html"><button type='button'>Add Another Book<button></a>
 </p>
 </body>
 </html>

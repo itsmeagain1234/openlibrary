@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 
 $sql = "SELECT bookdet.bookid,bookdet.bookname,bookdet.author,bookdet.regno,bookdet.status,phpro_users.username FROM bookdet join  phpro_users on bookdet.regno=phpro_users.regno ";
 $result = $conn->query($sql);
-$m=$phpro_book;
+$m=substr($phpro_book,2);
 
 
 if ($result->num_rows > 0) {
@@ -58,6 +58,7 @@ echo "</tr>";
 
 
     while($row = $result->fetch_assoc()) {
+	
         if(((strtoupper($row["bookname"])==$phpro_book)||($row["author"]==$phpro_book))&&(($row["regno"]!=$Regno))){
 	
         echo "<tr bgcolor='#B0B6B8'>";

@@ -13,6 +13,7 @@ $gender=mysqli_real_escape_string($link, $_POST['Gender']);
 $Regno=mysqli_real_escape_string($link, $_POST['regno']);
 $Email=mysqli_real_escape_string($link, $_POST['Email_Id']);
 $mob=mysqli_real_escape_string($link, $_POST['Mobile_Number']);
+echo $mob;
 if (isset($_FILES['profilepic'])) {
 echo "profile pic has something";
 }
@@ -44,6 +45,7 @@ fclose($fp);
 $sql = "INSERT INTO phpro_users (USERNAME,phpro_password,GENDER,REGNO,EMAILID,MOBNO,profilepic)VALUES ('$name', '$paswd', '$gender','$Regno','$Email','$mob','$data')";
 if(mysqli_query($link, $sql)){
     echo "<table><tr bgcolor=' #B0B6B8'><td>Records added successfully.</td></tr></table>";
+	echo $mob;
 	echo "<a  href=login.html ><button type='button'>GO_TO_LOGIN_PAGE</button></a>";
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
