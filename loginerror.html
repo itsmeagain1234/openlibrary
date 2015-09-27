@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>OpenLibrary - You are the library!!  Login Page</title>
+<link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="container">
+<?php if( isset( $_SESSION['REGNO'] ) ): ?>
+<h2>Login Here</h2>
+<form >
+<fieldset>
+<p>
+<label for="REGNO"><font color="red">INVALID USERNAME OR PASSWORD</font></label>
+</p>
+<p>
+<div id="lower">
+<a href=login.html><button type="button">TRY AGAIN</button></a>
+</div>
+</p>
+</fieldset>
+</form>
+</div>
+</body>
+</html>
+

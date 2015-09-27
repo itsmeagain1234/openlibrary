@@ -46,7 +46,29 @@ echo "<p align='right'> <a href='logout.php'><button type='button'>LOGOUT</butto
 }
 else 
 {
-echo "no doughnuts for you....hahaha...";
+echo "<html>
+<head>
+<title>OpenLibrary - You are the library!!  Login Page</title>
+<link type='text/css' rel='stylesheet' href='style.css' />
+</head>
+<body>
+<div id='container'>
+<form >
+<fieldset>
+<p>
+<label for='REGNO'><font color='red'><h3>INVALID USERNAME OR PASSWORD</h3></font></label>
+</p>
+<p>
+<div id='lower'>
+<a href=login.html><button type='button'>TRY AGAIN</button></a>
+</div>
+</p>
+</fieldset>
+</form>
+</div>
+</body>
+</html>
+";
 }
 ?>
 </body>

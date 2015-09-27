@@ -1,0 +1,42 @@
+commit f87c3460954f91f5ef042f94f5d6b43be32622a7
+Author: micky <mepentium@gmail.com>
+Date:   Sun Sep 27 22:23:40 2015 +0530
+
+    login_submit changed
+
+commit f0d55692313a9c6bbda79ba121c4824eab2cea22
+Author: micky <mepentium@gmail.com>
+Date:   Sun Sep 27 22:17:17 2015 +0530
+
+    modified login_submit.php
+
+commit 1df9a91b381dd915d36825fc5c6bd0facd618b0a
+Merge: 1b47d8d 3bd50ea
+Author: micky <mepentium@gmail.com>
+Date:   Sat Sep 26 22:34:09 2015 +0530
+
+    Merge branch 'master' of https://github.com/itsmeagain1234/openlibrary
+
+commit 1b47d8d88d72879808803ede930938de0cdcf968
+Author: micky <mepentium@gmail.com>
+Date:   Sat Sep 26 22:33:44 2015 +0530
+
+    changed a lot of  files
+
+commit 3bd50eabe286b1ea1a7b30d0b5c359e00699f77c
+Author: pratik <pratiksam@gmail.com>
+Date:   Sat Sep 26 22:22:55 2015 +0530
+
+    added meaningful title to login.html
+
+commit fe9b9269b9e719139cb31727ba1805b525b20b89
+Author: intellidork <intellidork@gmail.com>
+Date:   Sat Sep 26 11:47:15 2015 +0530
+
+    initial commit to master
+
+commit 4e599f9d3c713acf217b756e11c087d42641c01d
+Author: itsmeagain1234 <mepentium@gmail.com>
+Date:   Sat Sep 26 11:40:06 2015 +0530
+
+    Initial commit

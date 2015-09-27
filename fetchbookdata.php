@@ -62,6 +62,8 @@ echo "</tr>";
 	echo "<td>";
 	if($row["status"]==1){
 	echo "AVAILABLE";
+	echo "</td><td><p align='center'>NA</p></td>";
+	echo "<td><p align='center'>NA</p></td>";
 	}
 	elseif($row["status"]==2){
 	$bookidval=$row["bookid"];

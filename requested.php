@@ -52,7 +52,8 @@ while($row = $result->fetch_assoc()) {
         echo "Awaiting aproval";
         }
         elseif($row["status"]==2){
-        echo "ACCEPTED";
+	$det=$row["regno"];
+        echo "<a href=bookownerdet.php?own=$det>ACCEPTED</a>";
 }
 else{ 
 echo "Not accepted";
