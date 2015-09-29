@@ -22,14 +22,14 @@ if ($result->num_rows > 0) {
 	if($row['regno']==$_SESSION['REGNO'])
 {
 echo "<html><head><style>#parent{width:200px;} #parent img{max-width:100%;height:auto;}</style></head><body>";
-echo "<h4><font color='white'> ";
-echo "RegNo: " . $row["regno"];// " - Name: " . $row["username"] ;
+echo "<h3><font color='white'> ";
+echo $row["regno"];// " - Name: " . $row["username"] ;
 echo "</font>";
-echo "</h4>";
-echo "<h4><font color='white'>";
-echo "Name :". $row["username"];
+echo "</h3>";
+echo "<h3><font color='white'>";
+echo $row["username"];
 echo "</font>";
-echo "</h4>";
+echo "</h3>";
 
         echo "<br>";
         echo '<div id="parent"><img src="data:image/jpeg;base64,'.base64_encode( $row['profilepic'] ).'"/></div></body></html>';

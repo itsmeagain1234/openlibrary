@@ -33,16 +33,27 @@ $iframepage="login";
 }
 
 ?>
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-</head>
-<body background=" Book-iPad-wallpaper-Library-1.jpg">
-<div>
 <?php 
 if ($Flag==0)
 {
-echo "<p align='right'> <a href='logout.php'><button type='button'>LOGOUT</button></a></p></div><h1 align='center'><font color='white' face='verdana' color='green'> WELCOME TO OPEN-LIBRARY</font></h1> <iframe src=postlogin.html  height=99% width=99% frameborder='0' scrolling='no'></iframe>";
+echo "<html>
+<head>
+<link rel='Stylesheet' type='text/css' href='Stylesheetmenu.css'>
+<title>NAV BAR</title>
+</head>
+<body background='Book-iPad-wallpaper-Library-1.jpg '  class='news'>
+  <header>
+    <div class='nav'>
+      <ul>
+        <li class='users'><a href='#'>Users</a></li>
+        <li class='check mail'><a href='#'>Check Mail</a></li>
+        <li class='help'><a href='#'>Help</a></li>
+        <li class='contact us'><a href='#'>Contact Us</a></li>
+        <li class='about us'><a href='#'>About Us</a></li>
+      </ul>
+    </div>
+  </header>
+<p align='right'> <a href='logout.php'><button type='button'>LOGOUT</button></a></p></div><h1 align='center'><font color='white' face='verdana' color='green'> WELCOME TO OPEN-LIBRARY</font></h1> <iframe src=postlogin.html  height=99% width=99% frameborder='0' scrolling='no'></iframe></body></html>";
 }
 else 
 {
