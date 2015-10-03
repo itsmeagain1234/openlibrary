@@ -2,7 +2,7 @@
 session_start();
 $Regno=$_POST['REGNO'];
 $pass=$_POST['phpro_password'];
-
+$Regno=strtoupper($Regno);
 $servername = "localhost";
 $username = "root";
 $password = "admin123";
@@ -23,7 +23,12 @@ if ($result->num_rows > 0) {
 	if(($row["REGNO"]==$Regno)&&($row["phpro_password"]==$pass)){
 		echo "logged in";
 		 $_SESSION['REGNO'] =$row["REGNO"];
-			$Flag=0;	
+		$_SESSION['username']=$row['USERNAME'];
+		 $_SESSION['password']=$row["phpro_password"];
+		$_SESSION['email']=$row["EMAILID"];
+		$_SESSION['MOB']=$row["MOBNO"];
+                  $_SESSION['flagg']=0;		
+		$Flag=0;	
 			$iframepage="postlogin";
 }
 }}
@@ -33,27 +38,37 @@ $iframepage="login";
 }
 
 ?>
-<?php 
+<?php
 if ($Flag==0)
 {
+
 echo "<html>
 <head>
-<link rel='Stylesheet' type='text/css' href='Stylesheetmenu.css'>
+<link rel='stylesheet' type='text/css' href='stylesheetmenu1.css'/>
+<meta charset='utf-8'>
 <title>NAV BAR</title>
 </head>
-<body background='Book-iPad-wallpaper-Library-1.jpg '  class='news'>
-  <header>
-    <div class='nav'>
-      <ul>
-        <li class='users'><a href='#'>Users</a></li>
-        <li class='check mail'><a href='#'>Check Mail</a></li>
-        <li class='help'><a href='#'>Help</a></li>
-        <li class='contact us'><a href='#'>Contact Us</a></li>
-        <li class='about us'><a href='#'>About Us</a></li>
-      </ul>
-    </div>
-  </header>
-<p align='right'> <a href='logout.php'><button type='button'>LOGOUT</button></a></p></div><h1 align='center'><font color='white' face='verdana' color='green'> WELCOME TO OPEN-LIBRARY</font></h1> <iframe src=postlogin.html  height=99% width=99% frameborder='0' scrolling='no'></iframe></body></html>";
+<body background='Book-iPad-wallpaper-Library-1.jpg' >
+<ul>
+        <li><a href='viewprofile.php' target='_blank'><h3>View Profile</h3></a></li>
+        <li><a href='Help.html'><h3>Help</h3></a></li>
+        <li><a href='About.html'><h3>About Us</h3></a></li>
+        <li><a href='Contact.html'><h3>Contact Us</h3></a></li>
+        
+         <li>
+            <a href='#'><h3>Settings &#9662;</h3></a>
+            <ul class='dropdown'>
+                <li><a href='editprofile.php' target='_blank'>Edit Profile</a></li>
+		<li><a href='Pass.html' target='_blank'>Change Password</a></li>
+                <li><a href='deletbook.php' target='_blank'>Delet Books</a></li>
+                <li><a href='logout.php'>Logout</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+
+
+<h1 align='center'><font color='white' face='verdana' color='green'> WELCOME TO OPEN-LIBRARY</font></h1> <iframe src=postlogin.html  height=99% width=99% frameborder='0' scrolling='no'></iframe></body></html>";
 }
 else 
 {

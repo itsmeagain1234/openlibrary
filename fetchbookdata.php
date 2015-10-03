@@ -11,10 +11,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-
 $sql = "SELECT bookdet.bookid,bookdet.bookname,bookdet.author,bookdet.regno,bookdet.status,bookdet.Request,phpro_users.username FROM bookdet join  phpro_users on bookdet.regno=phpro_users.regno ";
 $result = $conn->query($sql);
-
 if ($result->num_rows > 0) {
 echo '<table border="3">';
 echo "<tr bgcolor=' #E6E6E6'>";
@@ -45,10 +43,7 @@ echo "<h5>";
 echo "USER DETAILS LINK";
 echo "</h5>";
 echo "</td>";
-
 echo "</tr>";
-
-
     while($row = $result->fetch_assoc()) {
 	if($Regno == $row["regno"]){
 	echo "<tr bgcolor='#B0B6B8'>";
@@ -61,22 +56,20 @@ echo "</tr>";
 	echo "</td>";
 	echo "<td>";
 	if($row["status"]==1){
-	echo "AVAILABLE";
+	echo "Available";
 	echo "</td><td><p align='center'>NA</p></td>";
 	echo "<td><p align='center'>NA</p></td>";
 	}
 	elseif($row["status"]==2){
 	$bookidval=$row["bookid"];
-	echo "<p>BORROWED<br>";
+	echo "<p>Borrowed<br>";
 	echo "<a href=received.php?bookid=$bookidval><button type='button'>RECEIVED</button></a></p>";
 	}
 	else{
 	$bookidval=$row["bookid"];
-	echo "<p> <a href=request.php?book=$bookidval><button type='button'>ACCEPT</button></a> <br>";
-	echo "<a href=denie.php?book=$bookidval><button type='button'>DENIE</button></a></p> ";
-
+	echo "<p> <a href=request.php?book=$bookidval><button type='button'>Accept</button></a> <br>";
+	echo "<a href=denie.php?book=$bookidval><button type='button'>Deny</button></a></p> ";
 }
-
 echo "</td>";
 echo "<td>";
 echo $row["Request"];
@@ -97,9 +90,7 @@ echo "<td>";
 echo "</td>";
 echo "</tr>";
 echo "</table>";
-
 echo "</form>";
-
 } else {
     echo "0 results";
 }

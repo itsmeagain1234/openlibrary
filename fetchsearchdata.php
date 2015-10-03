@@ -8,7 +8,7 @@ $username = "root";
 $password = "admin123";
 $dbname = "openlibrary";
 $Regno=$_SESSION['REGNO'];
-
+$Flag=0;
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -60,7 +60,7 @@ echo "</tr>";
     while($row = $result->fetch_assoc()) {
 	
         if(((strtoupper($row["bookname"])==$phpro_book)||($row["author"]==$phpro_book))&&(($row["regno"]!=$Regno))){
-	
+	$Flag=1;
         echo "<tr bgcolor='#B0B6B8'>";
         echo "<td>";
         echo  $row["bookname"];
@@ -96,6 +96,8 @@ echo "</tr>";
 
 }
 echo "</table>";
+if($Flag!=1)
+echo "<h2>Books Not Found</h2>";
 echo "<table>";
 echo "<tr bgcolor='#8D8DC2'><td><a href=booksearch.html>SEARCH AGAIN</a></td></tr></table>";
 }
