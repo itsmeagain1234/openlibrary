@@ -5,8 +5,8 @@
 <style type="text/css">
 h3{font-family: Calibri; font-size: 22pt; font-style: normal; font-weight: bold; color:SlateBlue;
 text-align: center; text-decoration: underline }
-table{font-family: Calibri; color:white; font-size: 14pt; font-style: normal;
-text-align:; background-color: SlateBlue; border-collapse: collapse; border: 2px solid navy}
+table{font-family: Calibri; color:#0481b1 ; font-size: 14pt; font-style: normal;
+text-align:; background-color:#E6E6E6; border-collapse: collapse; border: 2px solid navy}
 table.inner{border: 0px}
 </style>
 </head>
@@ -61,7 +61,7 @@ table.inner{border: 0px}
       return false;
     }
 
-//    alert("You entered a valid password: " + form.pwd1.value);
+confirm("Agree Terms and Conditions " );
     return true;
   }
   
@@ -89,7 +89,7 @@ table.inner{border: 0px}
 </tr>
 <tr>
 <td>EMAIL ID</td>
-<td><input type="email" placeholder="me@example.com" </td>
+<td><input type="email" placeholder="me@example.com" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" </td>
 </tr>
 <tr>
 <td>MOBILE NUMBER</td>
@@ -113,19 +113,6 @@ Female <input type="radio" name="Gender" value="Female" />
 <tr><td>Choose  a profile picture </td>
 <td>
 <input name="profilepic" accept="image/jpeg" type="file">
-</td>
-</tr>
- <tr>
-<td>COURSE<br />BOOKS <BR></td>
-<td>
-BCA
-<input type="radio" name="Course" value="BCA">
-B.Com
-<input type="radio" name="Course" value="B.Com">
-B.Sc
-<input type="radio" name="Course" value="B.Sc">
-B.A
-<input type="radio" name="Course" value="B.A">
 </td>
 </tr>
 <tr>

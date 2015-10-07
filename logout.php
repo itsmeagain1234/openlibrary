@@ -145,8 +145,8 @@ session_destroy();
             <fieldset>
                 <legend>LOGGED OUT</legend>
                                 
-				
-				<a href='login.html'><button type='button'>LOGIN AGAIN</button></a>
+			<div>	
+				<a href='index.html'><button type='button'>GO TO MAIN PAGE</button></a></div>
                 </fieldset>    
         </form>
     </div>
