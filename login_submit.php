@@ -56,7 +56,7 @@ WELCOME TO OPENLIBRARY...</h1>
 </li>
         <li><a href='viewprofile.php' target='_blank'><h3>View Profile</h3></a></li>
         <li><a href='Help.html'><h3>Help</h3></a></li>
-        <li><a href='About_Us.html'><h3>About Us</h3></a></li>
+        <li><a href='About_Us.html' target='_blank'><h3>About Us</h3></a></li>
         <li><a href='Contact.html'><h3>Contact Us</h3></a></li>
         
          <li>

@@ -105,6 +105,24 @@ echo " <html>
         -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
         box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
     }
+button[type='button']{
+        background: #222;
+        border: none;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+        text-transform:uppercase;
+        color: #eee;
+        cursor: pointer;
+        font-size: 15px;
+        margin: 5px 0;
+        padding: 5px 22px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-border-radius:4px;
+        -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+    }
+
     textarea {
         padding:3px;
         width:96%;
