@@ -10,14 +10,20 @@ p {
  text-align: center;
  font-size: x-large;
  color: #F8F8F8;
+ background-color:rgba(100,100,100,0.4);
 }
 
 h2 {
  text-align: center;
+ color: #F8F8F8;
 }
 
 #table {
  border-spacing: 0.5rem;
  border-collapse: collapse;
- color: #484848;
+ color:#FC9C00;
+}
+
+font {
+background-color:rgba(100,100,0,0.2);
 }
