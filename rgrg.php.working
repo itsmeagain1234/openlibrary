@@ -15,11 +15,11 @@ $Email=mysqli_real_escape_string($link, $_POST['email']);
 $mob=mysqli_real_escape_string($link, $_POST['Mobile_Number']);
 $Regno=strtoupper($Regno);
 if (isset($_FILES['profilepic'])) {
-	echo "profile pic has something";
+echo "profile pic has something";
 }
 else
 {
-	echo "profile pic is blank";
+echo "profile pic is blank";
 }
 
 
@@ -28,35 +28,21 @@ if (isset($_FILES['profilepic']) && $_FILES['profilepic']['size'] > 0) {
 
 // Temporary file name stored on the server
 
-	$tmpName = $_FILES['profilepic']['tmp_name'];
+$tmpName = $_FILES['profilepic']['tmp_name'];
 
 
 // Read the file
 
-	$fp = fopen($tmpName, 'r');
+$fp = fopen($tmpName, 'r');
 
-	$data = fread($fp, filesize($tmpName));
+$data = fread($fp, filesize($tmpName));
 
-	$data = addslashes($data);
+$data = addslashes($data);
 
-	fclose($fp);
-}
-else
-{
-echo "loading the default pic for user";
-// Read the file
-
-	$fp = fopen("defaultpic", "r") or die("Unable to open file!");
-
-	$data = fread($fp, filesize("defaultpic"));
-
-	$data = addslashes($data);
-
-	fclose($fp);
-}
+fclose($fp);
  
 // attempt insert query execution
-	$sql = "INSERT INTO phpro_users (USERNAME,phpro_password,GENDER,REGNO,EMAILID,MOBNO,profilepic)VALUES ('$name', '$paswd', '$gender','$Regno','$Email','$mob','$data')";
+$sql = "INSERT INTO phpro_users (USERNAME,phpro_password,GENDER,REGNO,EMAILID,MOBNO,profilepic)VALUES ('$name', '$paswd', '$gender','$Regno','$Email','$mob','$data')";
 if(mysqli_query($link, $sql)){
 	echo "<html lang='en'>
 <head>
@@ -359,10 +345,12 @@ button[type='button']{
 		<div><a href='tryregistration.html'><button type='button'>TRY AGAIN</button></a></div></fieldset></form></div></body></html>";
 		
 }
-
-
+}
+else
+{
+echo "something is wrong";
+}
  
 // close connection
 mysqli_close($link);
 ?>
-
